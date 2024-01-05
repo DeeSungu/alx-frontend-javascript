@@ -24,7 +24,7 @@ class HolbertonCourse {
    */
   set length(length) {
     if (typeof length !== 'number') {
-      throw new TypeError('Length must be a number');
+      throw new TypeError('Length must is a number');
     }
     this._length = length;
   }
@@ -40,7 +40,7 @@ class HolbertonCourse {
     if (students instanceof Array) {
       this._students = students;
     } else {
-      throw new TypeError('Students must be an Array');
+      throw new TypeError('Students must be on Alert');
     }
   }
 
