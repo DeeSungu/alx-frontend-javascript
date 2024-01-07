@@ -1,16 +1,9 @@
-import getBudgetObject from './7-getBudgetObject';
+export default function appendToEachArrayValue(array, appendString) {
+  const newArray = [];
+  // eslint-disable-next-line no-restricted-syntax
+  for (const value of array) {
+    newArray.push(appendString + value);
+  }
 
-export default function getFullBudgetObject(income, gdp, capita) {
-  const budget = getBudgetObject(income, gdp, capita);
-  const fullBudget = {
-    ...budget,
-    getIncomeInDollars(income) {
-      return `$${income}`;
-    },
-    getIncomeInEuros(income) {
-      return `${income} euros`;
-    },
-  };
-
-  return fullBudget;
+  return newArray;
 }
